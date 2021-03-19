@@ -13,6 +13,7 @@
 		EA0339222604A96200963BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0339202604A96200963BB4 /* Main.storyboard */; };
 		EA0339242604A97000963BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0339232604A97000963BB4 /* Assets.xcassets */; };
 		EA0339272604A97000963BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0339252604A97000963BB4 /* LaunchScreen.storyboard */; };
+		EA0339302604A98200963BB4 /* Dismay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA03392F2604A98200963BB4 /* Dismay.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EA0339232604A97000963BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0339262604A97000963BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0339282604A97000963BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA03392F2604A98200963BB4 /* Dismay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dismay.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				EA03391E2604A96200963BB4 /* ViewController.swift */,
 				EA0339202604A96200963BB4 /* Main.storyboard */,
 				EA0339232604A97000963BB4 /* Assets.xcassets */,
+				EA03392F2604A98200963BB4 /* Dismay.mp3 */,
 				EA0339252604A97000963BB4 /* LaunchScreen.storyboard */,
 				EA0339282604A97000963BB4 /* Info.plist */,
 			);
@@ -127,6 +130,7 @@
 				EA0339272604A97000963BB4 /* LaunchScreen.storyboard in Resources */,
 				EA0339242604A97000963BB4 /* Assets.xcassets in Resources */,
 				EA0339222604A96200963BB4 /* Main.storyboard in Resources */,
+				EA0339302604A98200963BB4 /* Dismay.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
