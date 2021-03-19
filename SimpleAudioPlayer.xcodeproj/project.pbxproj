@@ -14,6 +14,7 @@
 		EA0339242604A97000963BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0339232604A97000963BB4 /* Assets.xcassets */; };
 		EA0339272604A97000963BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0339252604A97000963BB4 /* LaunchScreen.storyboard */; };
 		EA0339302604A98200963BB4 /* Dismay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA03392F2604A98200963BB4 /* Dismay.mp3 */; };
+		EA9FF2BA2604D3E30088CDD8 /* Снимок экрана 2021-03-19 в 16.41.00.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9FF2B92604D3E30088CDD8 /* Снимок экрана 2021-03-19 в 16.41.00.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EA0339262604A97000963BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0339282604A97000963BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA03392F2604A98200963BB4 /* Dismay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dismay.mp3; sourceTree = "<group>"; };
+		EA9FF2B92604D3E30088CDD8 /* Снимок экрана 2021-03-19 в 16.41.00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Снимок экрана 2021-03-19 в 16.41.00.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		EA03390E2604A96100963BB4 = {
 			isa = PBXGroup;
 			children = (
+				EA9FF2B82604D3720088CDD8 /* Screenshot */,
 				EA0339192604A96200963BB4 /* SimpleAudioPlayer */,
 				EA0339182604A96200963BB4 /* Products */,
 			);
@@ -68,6 +71,14 @@
 				EA0339282604A97000963BB4 /* Info.plist */,
 			);
 			path = SimpleAudioPlayer;
+			sourceTree = "<group>";
+		};
+		EA9FF2B82604D3720088CDD8 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				EA9FF2B92604D3E30088CDD8 /* Снимок экрана 2021-03-19 в 16.41.00.png */,
+			);
+			path = Screenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +141,7 @@
 				EA0339272604A97000963BB4 /* LaunchScreen.storyboard in Resources */,
 				EA0339242604A97000963BB4 /* Assets.xcassets in Resources */,
 				EA0339222604A96200963BB4 /* Main.storyboard in Resources */,
+				EA9FF2BA2604D3E30088CDD8 /* Снимок экрана 2021-03-19 в 16.41.00.png in Resources */,
 				EA0339302604A98200963BB4 /* Dismay.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,9 +59,11 @@
                                     <constraint firstItem="qA0-YZ-pXP" firstAttribute="leading" secondItem="b4m-oG-ssL" secondAttribute="leading" id="uKN-2B-Nmm"/>
                                 </constraints>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.25" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LbZ-Ff-VmC">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LbZ-Ff-VmC">
                                 <rect key="frame" x="52" y="106.33333333333333" width="310" height="30.999999999999986"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <imageReference key="minimumValueImage" image="volume.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                                <imageReference key="maximumValueImage" image="volume.3.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                                 <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                 <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="thumbTintColor" systemColor="systemRedColor"/>
@@ -109,6 +112,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="volume.3.fill" catalog="system" width="128" height="86"/>
+        <image name="volume.fill" catalog="system" width="128" height="128"/>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
