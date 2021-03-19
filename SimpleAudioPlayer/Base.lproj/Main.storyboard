@@ -16,38 +16,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qA0-YZ-pXP">
-                                <rect key="frame" x="54" y="472" width="124" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="b4m-oG-ssL">
+                                <rect key="frame" x="57" y="475" width="300" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qA0-YZ-pXP">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="41"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="nw6-6c-59f"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="sGo-cd-b2r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                        <state key="normal" title="PLAY">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJR-zg-t6i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zL-nS-cwN">
+                                        <rect key="frame" x="200" y="0.0" width="100" height="41"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="peJ-c8-eku"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                                        <state key="normal" title="PAUSE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pauseButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CdJ-Gj-ofX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4zL-nS-cwN" secondAttribute="trailing" id="AlY-VA-80e"/>
+                                    <constraint firstItem="4zL-nS-cwN" firstAttribute="top" secondItem="b4m-oG-ssL" secondAttribute="top" id="DsJ-CX-tw8"/>
+                                    <constraint firstItem="qA0-YZ-pXP" firstAttribute="top" secondItem="b4m-oG-ssL" secondAttribute="top" id="O9X-FJ-BC7"/>
+                                    <constraint firstAttribute="bottom" secondItem="qA0-YZ-pXP" secondAttribute="bottom" id="aqz-2j-A51"/>
+                                    <constraint firstAttribute="bottom" secondItem="4zL-nS-cwN" secondAttribute="bottom" id="m2E-cP-iQr"/>
+                                    <constraint firstItem="qA0-YZ-pXP" firstAttribute="leading" secondItem="b4m-oG-ssL" secondAttribute="leading" id="uKN-2B-Nmm"/>
+                                </constraints>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.25" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LbZ-Ff-VmC">
+                                <rect key="frame" x="52" y="106.33333333333333" width="310" height="30.999999999999986"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" systemColor="systemRedColor"/>
                                 <connections>
-                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8O1-ZU-bB6"/>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="cjt-ao-Nlf"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zL-nS-cwN">
-                                <rect key="frame" x="236" y="472" width="124" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOLUME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HZ-Tx-rHU">
+                                <rect key="frame" x="177" y="50" width="60" height="21.333333333333329"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
-                                <state key="normal" title="Pause">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7EK-os-qe4"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REWIND" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CK-2w-yyy">
+                                <rect key="frame" x="167" y="294" width="80" height="21.333333333333314"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="2CK-2w-yyy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="294" id="3fs-eP-mv5"/>
+                            <constraint firstItem="b4m-oG-ssL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GjV-IJ-QSE"/>
+                            <constraint firstItem="2CK-2w-yyy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="167" id="T7t-Zo-1LJ"/>
+                            <constraint firstItem="3HZ-Tx-rHU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="WXK-0m-Ifb"/>
+                            <constraint firstItem="LbZ-Ff-VmC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZRN-S2-Bzu"/>
+                            <constraint firstItem="3HZ-Tx-rHU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iFB-DS-XJY"/>
+                            <constraint firstItem="2CK-2w-yyy" firstAttribute="centerX" secondItem="LbZ-Ff-VmC" secondAttribute="centerX" id="qif-Di-R0F"/>
+                            <constraint firstItem="LbZ-Ff-VmC" firstAttribute="top" secondItem="3HZ-Tx-rHU" secondAttribute="bottom" constant="35" id="sDa-Wo-RkE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b4m-oG-ssL" secondAttribute="bottom" constant="220" id="sTB-De-93n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LbZ-Ff-VmC" secondAttribute="trailing" constant="54" id="wav-yt-xT8"/>
+                            <constraint firstItem="LbZ-Ff-VmC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="xtd-lF-47d"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sliderBoard" destination="LbZ-Ff-VmC" id="BJo-9T-iZe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="88.858695652173921"/>
+            <point key="canvasLocation" x="-262" y="89"/>
         </scene>
     </scenes>
     <resources>
